@@ -45,3 +45,12 @@ services:
     # https://semgrep.dev/r?q=yaml.docker-compose.security.no-new-privileges.no-new-privileges
     security_opt:
       - no-new-privileges:true
+
+  iggy:
+    image: iggyrs/iggy:0.2.24
+    ports:
+    - 8080:8080
+    - 8090:8090
+    - 3000:3000
+    volumes:
+    - /iggy/local_data
